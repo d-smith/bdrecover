@@ -9,13 +9,9 @@ module.exports = async function (callback) {
 
     console.log("Loading private key: " + process.argv[4]);
 
-    console.log(web3.eth.accounts.wallet)
-
     const accounts = await web3.eth.getAccounts();
-    console.log(accounts)
 
     web3.eth.accounts.wallet.add(process.argv[4]);
-    console.log(web3.eth.accounts.wallet[0])
     
     let balance = await  web3.eth.getBalance(web3.eth.accounts.wallet[0].address)
     console.log("before bd account balance", balance);

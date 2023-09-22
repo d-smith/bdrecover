@@ -153,6 +153,6 @@ func main() {
 	fmt.Println("Recovered private ECDSA key:", privateECDSAKey)
 	fmt.Println("Recovered master chain code:", hex.EncodeToString(masterChainCode))
 
-	fmt.Printf("%x\n", privateECDSAKey.D.Bytes())
+	fmt.Printf("Private key %x\n", privateECDSAKey.D.Bytes())
 
 }

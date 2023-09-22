@@ -10,7 +10,7 @@ module.exports = async function (callback) {
     console.log("Funding account: " + process.argv[4]);
 
     const accounts = await web3.eth.getAccounts();
-    web3.eth.sendTransaction({to:process.argv[4], from:accounts[0], value: web3.utils.toWei('1')})
+    await web3.eth.sendTransaction({to:process.argv[4], from:accounts[0], value: web3.utils.toWei('1')})
 
     let balance = await await web3.eth.getBalance(process.argv[4])
     console.log(
